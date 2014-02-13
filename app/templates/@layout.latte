@@ -1,0 +1,93 @@
+{**
+ * GUESTBOOK
+ * Zkušební projekt v Nette a Dibi
+ * 
+ * @author Miroslav Mrázek <miroslav.mrazek@gmail.com>
+ *}
+
+{**
+ * @param string   $basePath web base path
+ * @param string   $robots   tell robots how to index the content of a page (optional)
+ * @param array    $flashes  flash messages
+ *}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="robots" content="{$robots}" n:ifset="$robots">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>{block title|striptags}Kniha návštěv{/block}</title>
+
+	<link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/bootstrap.css">
+	<link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/bootstrap-theme.css">
+	<link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/screen.css">
+	<link rel="stylesheet" media="print" href="{$basePath}/css/print.css">
+	<link rel="shortcut icon" href="{$basePath}/favicon.ico">
+	{block head}{/block}
+</head>
+
+<body>
+	<script> document.documentElement.className+=' js' </script>
+
+	<div id="wrap">
+		<div class="navbar-wrapper">
+			<div class="container">
+				<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						  <span class="sr-only">Toggle navigation</span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li n:class="$page === 'Homepage:guestbook' ? 'active'"><a n:href="Homepage:guestbook">Kniha návštěv</a></li>
+							<li n:class="$page === 'Homepage:about' ? 'active'"><a n:href="Homepage:about">O aplikaci</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							{if $user->isLoggedIn()}
+								<li><p class="navbar-text">{$user->identity->nick} | {control logoutControl}</p></li>
+							{else}
+								<li n:class="$page === 'Application:login' ? 'active'"><a n:href="Application:login">Přihlášení</a></li>
+							{/if}
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<div class="container">
+			<div n:snippet="flash">
+				<div n:foreach="$flashes as $flash" class="alert alert-{$flash->type}">
+					{$flash->message}
+					<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+				</div>
+			</div>
+			<div  n:snippet="content">
+				{include content}
+			</div>
+		</div>
+	</div>
+	
+	
+	<div id="footer">
+		<div class="container">
+			<p class="text-muted credit">Kniha návštěv © 2013 <a href="https://github.com/miroslav-mrazek">Miroslav Mrázek</a>.</p>
+		</div>
+	</div>
+
+	{block scripts}
+	<script src="{$basePath}/js/jquery.js"></script>
+	<script src="{$basePath}/js/bootstrap.js"></script>
+	<script src="{$basePath}/js/netteForms.js"></script>
+	<script src="{$basePath}/js/nette.ajax.js"></script>
+	<script src="{$basePath}/js/main.js"></script>
+	{/block}
+</body>
+</html>

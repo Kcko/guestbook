@@ -1,0 +1,16 @@
+##
+# GUESTBOOK
+# Zkušební projekt v Nette a Dibi
+# 
+# @author Miroslav Mrázek <miroslav.mrazek@gmail.com>
+#
+
+dibi:
+	host: "serverName"
+	username: "userName"
+	password: "userPassword"
+	database: "databaseName"
+
+nette:
+	container:
+		debugger: on

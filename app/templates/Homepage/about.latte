@@ -1,0 +1,26 @@
+{**
+ * GUESTBOOK
+ * Zkušební projekt v Nette a Dibi
+ * 
+ * @author Miroslav Mrázek <miroslav.mrazek@gmail.com>
+ *}
+
+{block content}
+
+<h1>O aplikaci</h1>
+
+<h2>Kniha návštěv:</h2>
+<p>Cílem je vytvořit komponentu, která by sloužila jako jednoduchá ajaxová diskuze, nebo návštěvní kniha.
+Každá komponenta je unikátní, psát příspěvky může každý a mazat smí jen administrátor.</p>
+
+<h2>Instalace:</h2>
+<ol>
+	<li>Vytvořte si databázi pomocí skriptu `app/model/database.sql`. Databáze již obsahuje uživatele 'admin' s heslem 'admin'.
+	<li>Zkopírujte si soubor `config.local.example.neon` na `config.local.neon` a doplňte do něj své údaje o databázi.
+	<li>Volitelně si databázi naplňte testovcími daty. Skript `app/model/database_testdata.sql` obsahuje nějaké příspěvky a uživatele 'user' s heslem 'user'.
+</ol>
+
+<h2>Diskuze:</h2>
+{control aboutDiscussion}
+
+{/block content}

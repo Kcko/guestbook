@@ -1,0 +1,11 @@
+##
+# GUESTBOOK
+# Zkušební projekt v Nette a Dibi
+# 
+# @author Miroslav Mrázek <miroslav.mrazek@gmail.com>
+#
+
+services:
+	- Guestbook\Model\Authenticator
+	- Guestbook\Model\UserRepository
+	- Guestbook\Model\NoteRepository

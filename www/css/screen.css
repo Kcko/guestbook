@@ -1,0 +1,158 @@
+#ajax-spinner {
+	margin: 15px 0 0 15px;
+	padding: 13px;
+	background: white url('../images/spinner.gif') no-repeat 50% 50%;
+	font-size: 0;
+	z-index: 123456;
+	display: none;
+}
+
+div.flash {
+	color: black;
+	background: #FFF9D7;
+	border: 1px solid #E2C822;
+	padding: 1em;
+	margin: 1em 0;
+}
+
+body {
+	color: #454545
+}
+
+h1, h2, a {
+	color: #6d929b;
+}
+
+h1 {
+	padding: 10px 0 20px 0;
+	text-transform: uppercase;
+}
+
+h2 {
+	padding: 5px 0 5px 0;
+}
+
+a[href^="error:"] {
+	background: red;
+	color: white;
+}
+
+form .required label {
+	font-weight: bold;
+}
+
+form .error {
+	color: #D00;
+	font-weight: bold;
+}
+
+html.js .jshidden {
+	display: none;
+}
+
+.navbar-default {
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#fff9f0), to(#E8D0A9));
+  background-image: -webkit-linear-gradient(top, #fff9f0 0%, #E8D0A9 100%);
+  background-image: -moz-linear-gradient(top, #fff9f0 0%, #E8D0A9 100%);
+  background-image: linear-gradient(to bottom, #fff9f0 0%, #E8D0A9 100%);
+  background-repeat: repeat-x;
+  border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff8f8f8', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
+}
+
+.navbar-default .navbar-nav > .active > a {
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#ebebeb), to(#B7AFA3));
+  background-image: -webkit-linear-gradient(top, #ebebeb 0%, #B7AFA3 100%);
+  background-image: -moz-linear-gradient(top, #ebebeb 0%, #B7AFA3 100%);
+  background-image: linear-gradient(to bottom, #ebebeb 0%, #B7AFA3 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffebebeb', endColorstr='#fff3f3f3', GradientType=0);
+  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
+}
+
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 70px 50px 90px 50px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #fff9f0;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#fff9f0), to(#fff9f0));
+  background-image: -webkit-linear-gradient(top, #E8D0A9 0%, #fff9f0 100%);
+  background-image: -moz-linear-gradient(top, #E8D0A9 0%, #fff9f0 100%);
+  background-image: linear-gradient(to bottom, #E8D0A9 0%, #fff9f0 100%);
+  background-repeat: repeat-x;
+  border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff8f8f8', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
+}
+
+#wrap > .container {
+  padding: 0 20px 0 20px;
+}
+
+.navbar {
+  padding: 0 50px 0 50px;
+}
+
+.container .credit {
+  margin: 20px;
+}
+
+#footer > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+div.discussion, div.login {
+	width: 600px;
+	border: 1px solid #ddd;
+	padding: 20px;
+}
+
+div.discussion label, div.login label {
+	color: #6d929b;
+}
+
+.alert-info, .alert-success, .alert-warning, .alert-danger {
+    margin: 10px 0px;
+    padding:15px 10px 15px 60px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+.alert-info {
+    background-image: url('../images/info.png');
+}
+
+.alert-success {
+    background-image:url('../images/success.png');
+}
+
+.alert-warning {
+    background-image: url('../images/warning.png');
+}
+
+.alert-danger {
+    background-image: url('../images/error.png');
+}

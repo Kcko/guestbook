@@ -1,0 +1,20 @@
+{
+	"name": "Guestbook",
+	"description": "Jednoduchá kniha návštěv.",
+	"type": "project",
+	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+	"authors": [
+		{
+			"name": "Miroslav Mrázek <miroslav.mrazek@gmail.com>",
+			"homepage": "http://miroslav-mrazek.cz"
+		}
+	],
+	"require": {
+		"php": ">= 5.4.0",
+		"nette/nette": "2.1.x",
+		"dibi/dibi": "2.1.x"
+	},
+	"require-dev": {
+		"nette/tester": "1.0.x"
+	}
+}

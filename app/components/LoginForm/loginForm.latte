@@ -1,0 +1,15 @@
+{**
+ * GUESTBOOK
+ * Zkušební projekt v Nette a Dibi
+ * 
+ * @author Miroslav Mrázek <miroslav.mrazek@gmail.com>
+ *}
+
+<div class="login">
+	{form loginForm}
+		<p>{label username /} {input username, class=>"form-control"}</p>
+		<p>{label password /} {input password, class=>"form-control"}</p>
+		<p>{label remember, class => "checkbox"}{input remember}Chci zůstat přihlášený{/label}</p>
+		<p>{input ok, class=>"btn btn-primary"}</p>
+	{/form}
+</div>

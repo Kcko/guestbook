@@ -1,0 +1,30 @@
+##
+# GUESTBOOK
+# Zkušební projekt v Nette a Dibi
+# 
+# @author Miroslav Mrázek <miroslav.mrazek@gmail.com>
+#
+
+extensions:
+	dibi: DibiNette21Extension
+
+php:
+	date.timezone: Europe/Prague
+	# zlib.output_compression: yes
+
+nette:
+	application:
+		errorPresenter: Error
+		mapping:
+			*: Guestbook\*Module\*Presenter
+
+	session:
+		expiration: 14 days
+
+services:
+	- Guestbook\RouterFactory
+	router: @Guestbook\RouterFactory::createRouter
+
+includes:
+	- model.neon
+	- components.neon

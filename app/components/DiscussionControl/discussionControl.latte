@@ -1,0 +1,34 @@
+{**
+ * GUESTBOOK
+ * Zkušební projekt v Nette a Dibi
+ * 
+ * @author Miroslav Mrázek <miroslav.mrazek@gmail.com>
+ *}
+ 
+{**
+ * @param array    $notes       Zprávy k zobrazení.
+ * @param boolean  $isEditable  Informace, zda je komponenta editovatelná.
+ *}
+
+<div class="discussion">
+
+	<div n:if="count($notes)" n:snippet="notes" class="notes">
+		<div n:foreach="$notes as $note">
+			{if $isEditable}
+				<a n:href="delete!, $note->id" class="ajax glyphicon glyphicon-remove"></a>
+			{/if}
+			<b>{$note->author}:</b>
+			{$note->text}
+			<hr>
+		</div>
+	</div>
+
+	<div class="noteForm">
+		{form noteForm, class => 'ajax'}
+			<p>{label author /}<br>{input author, class=>"form-control"}</p>
+			<p>{label text /}<br>{input text, class=>"form-control"}</p>
+			<p>{input ok, class=>"btn btn-default"}</p>
+		{/form}
+	</div>
+
+ </div>
