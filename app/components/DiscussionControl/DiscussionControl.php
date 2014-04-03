@@ -69,8 +69,8 @@ class DiscussionControl extends BaseControl
 		
 		$this->presenter->flashMessage('Příspěvek byl odstraněn.', 'success');
 		if ($this->presenter->isAjax()) {
-			$this->invalidateControl('notes');
-			$this->presenter->invalidateControl('flash');
+			$this->redrawControl('notes');
+			$this->presenter->redrawControl('flash');
 		}
 		else {
 			$this->presenter->redirect('this');
@@ -130,8 +130,8 @@ class DiscussionControl extends BaseControl
 			else {
 				$form->setValues([], TRUE);
 			}
-			$this->presenter->invalidateControl('flash');
-			$this->presenter->invalidateControl('content');
+			$this->presenter->redrawControl('flash');
+			$this->presenter->redrawControl('content');
 		}
 		else {
 			$this->presenter->redirect('this');
